@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+#root {
+    @apply h-[100vh]
+}
+
+.display {
+    @apply xl:w-1/4 lg:w-2/5 md:w-2/3 w-full md:h-2/3 h-full md:shadow-2xl md:border md:border-gray-300 md:rounded-lg md:absolute md:left-1/2 md:top-1/2 md:-translate-1/2
+}
+
+input {
+    @apply outline-0 border-2 border-slate-400 rounded p-1 placeholder:font-semibold placeholder:text-gray-300
+}
