@@ -2,11 +2,13 @@ import Display from "../components/display.tsx";
 import CustomButton from "../components/customButton.tsx";
 import {useState} from "react";
 import {numberGenerator} from "../utils/lib.ts";
+import {useNavigate} from "react-router";
 
 const GamePage = () => {
 
     const [number, setNumber] = useState(numberGenerator);
     const [i, setI] = useState(0)
+    const navigate = useNavigate();
 
     const playerList = localStorage.getItem('players') as string;
     const parsedList = JSON.parse(playerList)
@@ -28,7 +30,7 @@ const GamePage = () => {
                 <h1 className={'text-4xl font-semibold'}>{parsedList[i]}</h1>
                 <h2 className={'text-4xl font-semibold'}>{number}</h2>
                 <CustomButton onClick={roll}>NEXT PLAYER</CustomButton>
-                <CustomButton variant={"danger"}>QUIT</CustomButton>
+                <CustomButton variant={"danger"} onClick={() => navigate('/')}>QUIT</CustomButton>
             </Display>
         </>
     )

@@ -19,12 +19,22 @@ const NewGame = () => {
             alert("Please enter a player name");
             return;
         } else if (!playerList) {
-            localStorage.setItem('players', JSON.stringify([playerName]));
+            if (playerName === "stf" || playerName === "stefi" || playerName === 'stefana') {
+                localStorage.setItem("players", JSON.stringify(['Pizdonia']));
+                alert('Nume incorect defaulting to Pizdonia')
+            } else {
+                localStorage.setItem('players', JSON.stringify([playerName]));
+            }
             return;
         } else if (playerList) {
             const players = JSON.parse(playerList);
-            players.push(playerName)
-            localStorage.setItem('players', JSON.stringify(players));
+            if (playerName === "stf" || playerName === "stefi" || playerName === 'stefana') {
+                localStorage.setItem("players", JSON.stringify([...players, 'Pizdonia']));
+                alert('Nume incorect defaulting to Pizdonia')
+            } else {
+                localStorage.setItem('players', JSON.stringify([...players, playerName]));
+
+            }
         }
 
         (e.target as HTMLFormElement).reset();

@@ -13,10 +13,10 @@ function App() {
     return (
         <>
             <Display>
-                <h1 className={'text-2xl font-semibold'}>TO YOUR DRINKING CHALLENGE</h1>
                 <h1 className={'text-4xl font-semibold'}>WELCOME</h1>
+                <h2 className={'text-2xl font-semibold'}>TO YOUR DRINKING CHALLENGE</h2>
                 <div className={'flex flex-col gap-6 items-center'}>
-                    {checkPlayers && <CustomButton>Continue</CustomButton>}
+                    {/*{checkPlayers && <CustomButton>Continue</CustomButton>}*/}
                     <CustomButton onClick={() => navigate('/newgame')}>New Game</CustomButton>
                 </div>
             </Display>
