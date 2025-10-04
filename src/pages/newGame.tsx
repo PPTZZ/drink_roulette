@@ -13,6 +13,8 @@ const NewGame = () => {
         const playerName = formData.get("playerName");
         const playerList = localStorage.getItem('players');
 
+        // TO DO:  playerName === 'stefana' || 'stf' || 'stefi ? playerName = 'pizdonia' : playerName
+
         if (!playerName) {
             alert("Please enter a player name");
             return;

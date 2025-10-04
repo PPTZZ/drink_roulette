@@ -25,10 +25,10 @@ const GamePage = () => {
         <>
 
             <Display>
-                <h1>{parsedList[i]}</h1>
-                <h1>{i}</h1>
-                <h2>{number}</h2>
+                <h1 className={'text-4xl font-semibold'}>{parsedList[i]}</h1>
+                <h2 className={'text-4xl font-semibold'}>{number}</h2>
                 <CustomButton onClick={roll}>NEXT PLAYER</CustomButton>
+                <CustomButton variant={"danger"}>QUIT</CustomButton>
             </Display>
         </>
     )
